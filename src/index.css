@@ -1,0 +1,42 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap');
+
+@layer base {
+  :root {
+    --background: 218 32% 2%;
+    --foreground: 218 21% 97%;
+    --muted: 218 30% 7%;
+    --muted-foreground: 218 12% 69%;
+    --popover: 218 32% 3%;
+    --popover-foreground: 218 21% 98%;
+    --card: 218 32% 3%;
+    --card-foreground: 218 21% 98%;
+    --border: 218 11% 15%;
+    --input: 218 11% 15%;
+    --primary: 218 50% 25%;
+    --primary-foreground: 218 50% 85%;
+    --secondary: 218 13% 13%;
+    --secondary-foreground: 218 13% 73%;
+    --accent: 218 19% 19%;
+    --accent-foreground: 218 19% 79%;
+    --destructive: 9 82% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 218 50% 25%;
+  }
+}
+
+@layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+* {
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
