@@ -1,14 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import DragAndDropZone from './pages/components/DragAndDropZone';
+import Home from './pages/Home';
+import ListFilePicture from './pages/ListFilePicture';
 import ScrollToTop from '../ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
-      <DragAndDropZone />
-      <Routes>
-          {/* <Route path="/inscription" element={<Register />} /> */}
+    <ScrollToTop />
+     <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/picture" element={<ListFilePicture />} />
       </Routes>
     </BrowserRouter>
   );
