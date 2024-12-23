@@ -7,7 +7,7 @@ const FoldersView = () => {
     <section className="pb-8">
       <div className="grid grid-cols-4 gap-6">
         <Link
-          to="#"
+          to="/download"
           className="flex flex-col justify-center items-center gap-0 bg-gray-100 px-2 py-2 rounded hover:bg-gray-200"
         >
           <Folder className="w-10 h-10 text-blue-400" />
@@ -32,7 +32,7 @@ const FoldersView = () => {
           </p>
         </Link>
         <Link
-          to="#"
+          to="/pdf"
           className="flex flex-col justify-center items-center gap-0 bg-gray-100 px-2 py-2 rounded hover:bg-gray-200"
         >
           <Folder className="w-10 h-10 text-blue-400" />
