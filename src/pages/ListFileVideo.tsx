@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Download, Trash } from "lucide-react";
 
-function ListFilePicture() {
+function ListFileVideo() {
   const [fileList, setFileList] = useState<any>({});
 
   useEffect(() => {
@@ -63,7 +63,7 @@ function ListFilePicture() {
             <TableCell className="text-gray-400 text-md font-bold px-6 py-3">
               {file.path}
             </TableCell>
-            <TableCell className="text-gray-400 text-md font-bold px-6 py-3 text-center">
+            <TableCell className="text-gray-400 text-md font-bold px-6 py-3">
               {file.size}
             </TableCell>
             <TableCell className="flex items-center gap-3 px-6 py-3 text-center">
@@ -100,10 +100,12 @@ function ListFilePicture() {
     );
   };
 
+  const hasFilesInPicture = (fileList["video"] || []).length === 0;
+
   return (
     <section className="max-w-screen-md mx-auto pt-16">
-      {fileList.length === 0 ? (
-        <p className="texte-center text-gray-500">No data</p>
+      {hasFilesInPicture ? (
+        <p className="text-center text-gray-500">No data</p>
       ) : (
         <div>
           <Breadcrumb className="pb-6">
@@ -138,7 +140,7 @@ function ListFilePicture() {
                 </TableHead>
               </TableRow>
             </TableHeader>
-            {renderFiles("picture")}
+            {renderFiles("video")}
           </Table>
         </div>
       )}
@@ -146,4 +148,4 @@ function ListFilePicture() {
   );
 }
 
-export default ListFilePicture;
+export default ListFileVideo;

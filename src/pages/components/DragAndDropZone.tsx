@@ -114,17 +114,17 @@ const DragAndDropZone = () => {
 
   return (
     <section>
-      <div className="border border-gray-600 rounded w-full px-12 py-12">
+      <div className="border border-gray-300 rounded w-full px-12 py-12">
         <div
           {...getRootProps({
-            className: `dropzone bg-gray-900 border-dashed border-2 px-16 py-16 flex justify-center items-center ${
-              hasError ? "border-red-500" : "border-gray-600"
+            className: `dropzone bg-gray-100 border-dashed border-2 px-16 py-16 flex justify-center items-center ${
+              hasError ? "border-red-500" : "border-gray-300"
             }`,
           })}
         >
           <input {...getInputProps()} />
           <p
-            className={`text-center text-${hasError ? "red-500" : "gray-600"}`}
+            className={`text-center text-${hasError ? "red-500" : "gray-400"}`}
           >
             Drag 'n' drop some files here, or click to select files
           </p>
@@ -151,7 +151,7 @@ const DragAndDropZone = () => {
               folder: getFolderForFile(acceptedFiles[0]),
             })
           }
-          className="rounded text-lg"
+          className="bg-blue-700 hover:bg-blue-600 text-white rounded text-lg"
         >
           Organize Now
         </Button>
