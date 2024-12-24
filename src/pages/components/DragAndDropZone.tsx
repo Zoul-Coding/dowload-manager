@@ -108,16 +108,16 @@ const DragAndDropZone = () => {
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>
-      {file.path} - {file.size} bytes - Folder: {getFolderForFile(file)}
+      {file.path} - {file.size} bytes {/* - Folder: {getFolderForFile(file)} */}
     </li>
   ));
 
   return (
     <section>
-      <div className="border border-gray-300 rounded w-full px-12 py-12">
+      <div className="">
         <div
           {...getRootProps({
-            className: `dropzone bg-gray-100 border-dashed border-2 px-16 py-16 flex justify-center items-center ${
+            className: `dropzone bg-gray-100 rounded border-dashed border-2 px-16 py-20 flex justify-center items-center ${
               hasError ? "border-red-500" : "border-gray-300"
             }`,
           })}
@@ -136,7 +136,7 @@ const DragAndDropZone = () => {
         )}
         {isFileDropped && (
           <aside className="pt-6">
-            <h4 className="text-gray-200">Files</h4>
+            <h4 className="text-gray-400">Files</h4>
             <ul className="text-gray-400">{files}</ul>
           </aside>
         )}

@@ -105,7 +105,7 @@ function ListFilePdf() {
   return (
     <section className="max-w-screen-md mx-auto pt-16">
       {hasFilesInPicture ? (
-        <p className="text-center text-gray-500">No data</p>
+        <p className="text-center text-gray-500">No data available</p>
       ) : (
         <div>
           <Breadcrumb className="pb-6">
@@ -121,7 +121,7 @@ function ListFilePdf() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbPage className="text-gray-600 font-bold">
-                  pdf
+                  Pdf
                 </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>

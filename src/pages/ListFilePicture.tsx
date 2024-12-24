@@ -100,10 +100,12 @@ function ListFilePicture() {
     );
   };
 
+  const hasFilesInPicture = (fileList["picture"] || []).length === 0;
+
   return (
     <section className="max-w-screen-md mx-auto pt-16">
-      {fileList.length === 0 ? (
-        <p className="texte-center text-gray-500">No data</p>
+      {hasFilesInPicture ? (
+        <p className="texte-center text-gray-500">No data available</p>
       ) : (
         <div>
           <Breadcrumb className="pb-6">
@@ -119,7 +121,7 @@ function ListFilePicture() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbPage className="text-gray-600 font-bold">
-                  picture
+                  Picture
                 </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
