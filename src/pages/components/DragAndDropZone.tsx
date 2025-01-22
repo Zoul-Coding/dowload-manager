@@ -8,7 +8,7 @@ const DragAndDropZone = () => {
   const [fileList, setFileList] = useState(() => {
     // Chargement des fichiers sauvegardés depuis le localStorage
     const savedFiles = localStorage.getItem("uploadedFiles");
-    return savedFiles ? JSON.parse(savedFiles) : { picture: [], pdf: [], video: [] }; // Structure modifiée
+    return savedFiles ? JSON.parse(savedFiles) : { picture: [], pdf: [], video: [] };
   });
   const [hasError, setHasError] = useState(false);
 

@@ -63,7 +63,7 @@ function ListFilePicture() {
             <TableCell className="text-gray-400 text-md font-bold px-6 py-3">
               {file.path}
             </TableCell>
-            <TableCell className="text-gray-400 text-md font-bold px-6 py-3 text-center">
+            <TableCell className="text-gray-400 text-md font-bold px-6 py-3 text-start">
               {file.size}
             </TableCell>
             <TableCell className="flex items-center gap-3 px-6 py-3 text-center">
@@ -105,7 +105,7 @@ function ListFilePicture() {
   return (
     <section className="max-w-screen-md mx-auto pt-16">
       {hasFilesInPicture ? (
-        <p className="texte-center text-gray-500">No data available</p>
+        <p className="text-center text-gray-500">No data available</p>
       ) : (
         <div>
           <Breadcrumb className="pb-6">
